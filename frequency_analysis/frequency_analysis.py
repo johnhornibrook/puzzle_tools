@@ -26,7 +26,8 @@ class FrequencyAnalysis:
         for i in range(len(s) - 3):
             quadgram = s[i:i+4]
             score += self._score_gram(quadgram)
-        return score / (len(s) - 3)
+
+        return round(score / (len(s) - 3), 3)
 
     def rank_strings(self, s_array, num_to_output=10):
         """
